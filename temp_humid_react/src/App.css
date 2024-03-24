@@ -1,0 +1,160 @@
+@font-face {
+  font-family: Digital;
+  src: url('./digital-7.ttf');
+}
+
+#root {
+  font-family: Digital;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  justify-content: space-evenly;
+  height: 100vh;
+  background-color: aliceblue;
+}
+
+
+
+/* Middle Humidity Indicator Bar Color Rectangles */
+.mid-bar {
+  display: flex;
+  justify-content: space-evenly;
+  overflow: hidden;
+  width: 100vw;
+  padding: 0;
+  position: relative;
+}
+
+.bar-cursor {
+  color: orange;
+  position: absolute;
+  left: calc(30% - 24px);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 36px 24px 0 24px;
+  border-color: hsl(41, 97%, 50%) transparent transparent transparent;
+  z-index: 1;
+}
+
+.low {
+  background-color: lightskyblue;
+  width: 45%;
+  margin-left: -15%;
+  height: 5rem;
+  transform: skewX(-30deg);
+}
+
+.mid {
+  background-color: green;
+  width: 30%;
+  height: 5rem;
+  transform: skewX(-30deg);
+}
+
+.high {
+  background-color: red;
+  width: 45%;
+  margin-right: -15%;
+  height: 5rem;
+  transform: skewX(-30deg);
+}
+
+/* Middle Humidity Indicator Bar Text */
+.mid-bar-text {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+  font-size: 2em;
+}
+
+.mid-bar-center {
+  display: flex;
+  justify-content: space-between;
+  min-width: 40%;
+}
+
+.mid-bar-text-large {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+/* Sensor Components */
+.h-100 {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.sensor-num {
+  font-size: 20rem;
+  display: flex;
+  flex-grow: 2;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Range values on the left */
+.range {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: 30%;
+  font-size: 3em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.range-elem {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.range-value {
+  background:
+    linear-gradient(to right, black 3px, transparent 3px) 0 0,
+    linear-gradient(to right, black 3px, transparent 3px) 0 100%,
+    linear-gradient(to left, black 3px, transparent 3px) 100% 0,
+    linear-gradient(to left, black 3px, transparent 3px) 100% 100%,
+    linear-gradient(to bottom, black 3px, transparent 3px) 0 0,
+    linear-gradient(to bottom, black 3px, transparent 3px) 100% 0,
+    linear-gradient(to top, black 3px, transparent 3px) 0 100%,
+    linear-gradient(to top, black 3px, transparent 3px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 50px 35px;
+  padding: 12px;
+  width: 1.5em;
+  font-size: 1em;
+  border-radius: 6px;
+}
+
+/* Trend Icons on the Right */
+.trend {
+  display: flex;
+  min-width: 30%;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  font-size: 4em;
+}
+
+.trend-mark {
+  font-weight: 500;
+  font-size: 2.5em;
+  margin-bottom: 0.75rem;
+  margin-top: 2rem;
+}
+
+.trend-label {
+  margin-bottom: -0.5em;
+}
+
+.trend-text {
+  font-size: 0.75em;
+  font-weight: 200;
+}
