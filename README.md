@@ -2,6 +2,8 @@
 
 This is the source code of the YouTube video: https://youtu.be/LN7sZzeXmg8?si=7sS2U6yUnaIPMjJp
 
+![youtube-image](https://github.com/printfinn/py-react-temp-humid-sensor-hmi/assets/10386624/ca09e09f-76d2-4c6c-8e14-883c3afee325)
+
 In the `temp_humid_sensor` folder, it's the Python backend code, made with Flask, don't forget to change the tty port if you're testing on your own machine. If you don't have a modbus sensor connected, you can comment out the serial port code, and return a dummy value in `return jsonify` for testing purpose.
 
 In the `temp_humid_react` folder, it's the ReactJS frontend code, don't forget to change the IP address in `useEffect` to point it to your Python backend IP.
